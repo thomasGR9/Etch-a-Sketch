@@ -1,0 +1,28 @@
+
+
+.wholeBody {
+    background-color: antiquewhite;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+#sketchPlace {
+flex: 0 1 auto;
+background-color: white;
+width: 500px;
+height: 500px;
+display: flex;
+flex-flow: row wrap;
+align-items: flex-start;
+align-content: flex-start;
+}
+
+#gridClass {
+    margin: 0px;
+    background-color: blue;
+    padding: 0px;
+}
