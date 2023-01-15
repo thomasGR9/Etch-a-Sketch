@@ -65,15 +65,21 @@ peos.forEach((div) => {
     div.style.height = gridWidth + "px";
 })
 
-
+const btns = document.querySelectorAll('button');
 const colorButton = document.querySelector('#colorButton');
 const rainbowButton = document.querySelector('#rainbowModeButton');
 const eraserButton = document.querySelector('#eraserButton');
 const clearButton = document.querySelector('#clearButton');
 
 
+
+ 
+
+
     colorButton.addEventListener('click', () => {
-        colorButton.classList.toggle('clickedButton');
+        colorButton.classList.add('clickedButton');
+        eraserButton.classList.remove('clickedButton');
+        rainbowButton.classList.remove('clickedButton');
         peos.forEach((div) => {
             div.addEventListener('mouseover', () => {
                 div.style.backgroundColor = 'black';
@@ -82,8 +88,12 @@ const clearButton = document.querySelector('#clearButton');
     });
 
 
+
+
     eraserButton.addEventListener('click', () => {
-        eraserButton.classList.toggle('clickedButton');
+        eraserButton.classList.add('clickedButton');
+        colorButton.classList.remove('clickedButton');
+        rainbowButton.classList.remove('clickedButton');
         peos.forEach((div) => {
             div.addEventListener('mouseover', () => {
                 div.style.backgroundColor = 'blue';
