@@ -34,7 +34,7 @@ align-content: flex-start;
    display: flex;
    flex-flow: column nowrap;
    justify-content: space-evenly;
-   align-items: center;
+   align-items: flex-start;
 }
 
 .buttonClass {
@@ -68,4 +68,9 @@ align-content: flex-start;
 
 #clearButton {
     width: inherit;
+}
+
+.clickedButton {
+    color: white;
+    background-color: black;
 }
