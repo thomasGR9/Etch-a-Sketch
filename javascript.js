@@ -1,6 +1,7 @@
 
 const container = document.querySelector('#sketchPlace');
-let gridWidth = 28;
+let gridWidth = 10;
+//gridWidth = prompt("Enter the block's width and height");
 let arr = [];
 let arr1 = [];
 
@@ -65,3 +66,9 @@ peos.forEach((div) => {
 })
 
 
+
+peos.forEach((div) => {
+    div.addEventListener('mouseover', () => {
+        div.style.backgroundColor = 'black';
+    })
+})

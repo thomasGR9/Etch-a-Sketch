@@ -4,7 +4,7 @@
     background-color: antiquewhite;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
 
@@ -25,4 +25,47 @@ align-content: flex-start;
     margin: 0px;
     background-color: blue;
     padding: 0px;
+}
+
+.buttonsContainer {
+   width: 150px;
+   height: 500px; 
+   margin-left: 145px;
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.buttonClass {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    width: 120px;
+    border: groove;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#colorButton {
+    width: inherit;
+}
+
+
+#rainbowModeButton {
+    width: inherit;
+}
+
+
+
+#eraserButton {
+    width: inherit;
+}
+
+
+
+
+#clearButton {
+    width: inherit;
 }
