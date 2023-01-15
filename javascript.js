@@ -71,9 +71,16 @@ const rainbowButton = document.querySelector('#rainbowModeButton');
 const eraserButton = document.querySelector('#eraserButton');
 const clearButton = document.querySelector('#clearButton');
 
+let rainbowColors = ['red', 'orange', 'yellow', 'green', 'violet'];
+
+function rainbowFunction() {
+let x = Math.random() * rainbowColors.length;
+let y = Math.floor(x);
+return rainbowColors[y];
+}
 
 
- 
+
 
 
     colorButton.addEventListener('click', () => {
@@ -87,6 +94,18 @@ const clearButton = document.querySelector('#clearButton');
         })
     });
 
+
+
+    rainbowButton.addEventListener('click', () => {
+        rainbowButton.classList.add('clickedButton');
+        eraserButton.classList.remove('clickedButton');
+        colorButton.classList.remove('clickedButton');
+        peos.forEach((div) => {
+            div.addEventListener('mouseover', () => {
+                div.style.backgroundColor = rainbowFunction();
+            }) 
+        })
+    });
 
 
 
