@@ -51,14 +51,12 @@ border: groove;
 
 #colorButton {
     width: inherit;
-    background-color: white;
     border: none;
 }
 
 
 #rainbowModeButton {
     width: inherit;
-    background-color: white;
     border: none;
 }
 
@@ -66,7 +64,6 @@ border: groove;
 
 #eraserButton {
     width: inherit;
-    background-color: white;
     border: none;
 }
 
@@ -75,7 +72,6 @@ border: groove;
 
 #clearButton {
     width: inherit;
-    background-color: white;
     border: none;
 }
 
@@ -124,17 +120,19 @@ border: groove;
         margin-left: 10px;
 }
 
+#tiny {
+    width: inherit;
+    border: none;
+}
 
 #small {
     width: inherit;
-    background-color: white;
     border: none;
 }
 
 
 #medium {
     width: inherit;
-    background-color: white;
     border: none;
 }
 
@@ -142,7 +140,6 @@ border: groove;
 
 #large {
     width: inherit;
-    background-color: white;
     border: none;
 }
 
@@ -151,10 +148,10 @@ border: groove;
 
 #huge {
     width: inherit;
-    background-color: white;
     border: none;
 }
 
 #sizeText {
     margin-left: 15px;
+    text-decoration: underline;
 }

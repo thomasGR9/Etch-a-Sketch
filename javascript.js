@@ -1,6 +1,6 @@
 
 const container = document.querySelector('#sketchPlace');
-let gridWidth = 10;
+let gridWidth 
 
 //gridWidth = prompt("Enter the block's width and height");
 let arr = [];
@@ -9,8 +9,8 @@ let arr1 = [];
 for (let i = 0; i <= 500; i++) {
 if (500 % i == 0) {
     arr.push(i);
-}
-}
+}}
+
     
 for (let i = 0; i <= 11; i++) {
     arr1.push(Math.abs(arr[i]-gridWidth));
@@ -27,6 +27,60 @@ let x;
              x = arr[i];
         }  
     }
+
+const tinyButton = document.querySelector('#tiny');
+const smallButton = document.querySelector('#small');
+const mediumButton = document.querySelector('#medium');
+const largeButton = document.querySelector('#large');
+const hugeButton = document.querySelector('#huge');
+
+tinyButton.addEventListener('click', () => {
+    tinyButton.classList.add('clickedButton');
+    smallButton.classList.remove('clickedButton');
+    mediumButton.classList.remove('clickedButton');
+    largeButton.classList.remove('clickedButton');
+    hugeButton.classList.remove('clickedButton');
+    gridWidth = 5;
+})
+
+smallButton.addEventListener('click', () => {
+    smallButton.classList.add('clickedButton');
+    tinyButton.classList.remove('clickedButton');
+    mediumButton.classList.remove('clickedButton');
+    largeButton.classList.remove('clickedButton');
+    hugeButton.classList.remove('clickedButton');
+    gridWidth = 10;
+    
+})
+
+mediumButton.addEventListener('click', () => {
+    mediumButton.classList.add('clickedButton');
+    tinyButton.classList.remove('clickedButton');
+    smallButton.classList.remove('clickedButton');
+    largeButton.classList.remove('clickedButton');
+    hugeButton.classList.remove('clickedButton');
+    gridWidth = 20;
+})
+
+largeButton.addEventListener('click', () => {
+    largeButton.classList.add('clickedButton');
+    tinyButton.classList.remove('clickedButton');
+    mediumButton.classList.remove('clickedButton');
+    smallButton.classList.remove('clickedButton');
+    hugeButton.classList.remove('clickedButton');
+    gridWidth = 50;
+})
+
+hugeButton.addEventListener('click', () => {
+    hugeButton.classList.add('clickedButton');
+    tinyButton.classList.remove('clickedButton');
+    mediumButton.classList.remove('clickedButton');
+    largeButton.classList.remove('clickedButton');
+    smallButton.classList.remove('clickedButton');
+    gridWidth = 100;
+})
+
+
     
     
 
@@ -71,6 +125,8 @@ const colorButton = document.querySelector('#colorButton');
 const rainbowButton = document.querySelector('#rainbowModeButton');
 const eraserButton = document.querySelector('#eraserButton');
 const clearButton = document.querySelector('#clearButton');
+
+
 
 let rainbowColors = ['red', 'orange', 'yellow', 'green', 'violet'];
 
