@@ -115,7 +115,7 @@ return rainbowColors[y];
         rainbowButton.classList.remove('clickedButton');
         peos.forEach((div) => {
             div.addEventListener('mouseover', () => {
-                div.style.backgroundColor = 'blue';
+                div.style.backgroundColor = 'white';
             })
         })
     });
@@ -123,7 +123,7 @@ return rainbowColors[y];
 
     clearButton.addEventListener('click', () => {
         peos.forEach((div) => {
-                div.style.backgroundColor = 'blue';
+                div.style.backgroundColor = 'white';
             });
         });
     

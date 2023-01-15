@@ -19,18 +19,19 @@ display: flex;
 flex-flow: row wrap;
 align-items: flex-start;
 align-content: flex-start;
+border: groove;
 }
 
 #gridClass {
     margin: 0px;
-    background-color: blue;
+    background-color: white;
     padding: 0px;
 }
 
 .buttonsContainer {
    width: 150px;
    height: 500px; 
-   margin-left: 145px;
+   margin-left: 50px;
    display: flex;
    flex-flow: column nowrap;
    justify-content: space-evenly;
@@ -73,4 +74,15 @@ align-content: flex-start;
 .clickedButton {
     color: white;
     background-color: black;
+}
+
+.header {
+    align-self: flex-start;
+    margin-top: 0px;
+}
+
+.marginFix {
+    margin-top: 0px;
+    border: outset;
+    padding-right: 2px;
 }
