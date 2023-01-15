@@ -1,6 +1,7 @@
 
 const container = document.querySelector('#sketchPlace');
 let gridWidth = 10;
+
 //gridWidth = prompt("Enter the block's width and height");
 let arr = [];
 let arr1 = [];

@@ -51,17 +51,23 @@ border: groove;
 
 #colorButton {
     width: inherit;
+    background-color: white;
+    border: none;
 }
 
 
 #rainbowModeButton {
     width: inherit;
+    background-color: white;
+    border: none;
 }
 
 
 
 #eraserButton {
     width: inherit;
+    background-color: white;
+    border: none;
 }
 
 
@@ -69,6 +75,8 @@ border: groove;
 
 #clearButton {
     width: inherit;
+    background-color: white;
+    border: none;
 }
 
 .clickedButton {
@@ -85,4 +93,68 @@ border: groove;
     margin-top: 0px;
     border: outset;
     padding-right: 2px;
+}
+
+.textBox {
+    align-self: center;
+    width: 160px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin-right: 23px;
+
+}
+
+#blockwidth {
+    width: 50px;
+    align-self: center;
+}
+
+
+.sizeChooseSection {
+    
+        width: 150px;
+        height: 500px; 
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        margin-left: 10px;
+}
+
+
+#small {
+    width: inherit;
+    background-color: white;
+    border: none;
+}
+
+
+#medium {
+    width: inherit;
+    background-color: white;
+    border: none;
+}
+
+
+
+#large {
+    width: inherit;
+    background-color: white;
+    border: none;
+}
+
+
+
+
+#huge {
+    width: inherit;
+    background-color: white;
+    border: none;
+}
+
+#sizeText {
+    margin-left: 15px;
 }
