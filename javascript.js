@@ -1,8 +1,94 @@
 
 const container = document.querySelector('#sketchPlace');
-let gridWidth 
+let gridWidth ;
 
-//gridWidth = prompt("Enter the block's width and height");
+const grid = document.createElement('div');
+grid.setAttribute("id", "gridClass");
+container.appendChild(grid);
+
+function makeGrid(gridWidth) {
+    for (let i = 0; i < ((500 / gridWidth) -1) * ((500 / gridWidth) + 1); i++) {
+        const grid = document.createElement('div');
+        grid.setAttribute("id", "gridClass");
+        container.appendChild(grid); 
+    }
+        const peos = container.querySelectorAll('div');
+
+peos.forEach((div) => {
+    div.style.width = gridWidth + "px";
+})
+
+peos.forEach((div) => {
+    div.style.height = gridWidth + "px";
+})}
+
+
+const tinyButton = document.querySelector('#tiny');
+const smallButton = document.querySelector('#small');
+const mediumButton = document.querySelector('#medium');
+const largeButton = document.querySelector('#large');
+const hugeButton = document.querySelector('#huge');
+
+tinyButton.addEventListener('click', () => {
+    tinyButton.classList.add('clickedButton');
+    smallButton.classList.remove('clickedButton');
+    mediumButton.classList.remove('clickedButton');
+    largeButton.classList.remove('clickedButton');
+    hugeButton.classList.remove('clickedButton');
+    gridWidth = 10;
+    console.log(gridWidth);
+    makeGrid(gridWidth)
+    
+})
+
+smallButton.addEventListener('click', () => {
+    smallButton.classList.add('clickedButton');
+    tinyButton.classList.remove('clickedButton');
+    mediumButton.classList.remove('clickedButton');
+    largeButton.classList.remove('clickedButton');
+    hugeButton.classList.remove('clickedButton');
+    gridWidth = 20;
+    console.log(gridWidth);
+    makeGrid(gridWidth)
+
+    
+})
+
+mediumButton.addEventListener('click', () => {
+    mediumButton.classList.add('clickedButton');
+    tinyButton.classList.remove('clickedButton');
+    smallButton.classList.remove('clickedButton');
+    largeButton.classList.remove('clickedButton');
+    hugeButton.classList.remove('clickedButton');
+    gridWidth = 50;
+    console.log(gridWidth);
+    makeGrid(gridWidth)
+})
+
+largeButton.addEventListener('click', () => {
+    largeButton.classList.add('clickedButton');
+    tinyButton.classList.remove('clickedButton');
+    mediumButton.classList.remove('clickedButton');
+    smallButton.classList.remove('clickedButton');
+    hugeButton.classList.remove('clickedButton');
+    gridWidth = 100;
+    console.log(gridWidth);
+    makeGrid(gridWidth)
+    
+})
+
+hugeButton.addEventListener('click', () => {
+    hugeButton.classList.add('clickedButton');
+    tinyButton.classList.remove('clickedButton');
+    mediumButton.classList.remove('clickedButton');
+    largeButton.classList.remove('clickedButton');
+    smallButton.classList.remove('clickedButton');
+    gridWidth = 125;
+    console.log(gridWidth);
+    makeGrid(gridWidth)
+})
+const peos = container.querySelectorAll('div');
+/*
 let arr = [];
 let arr1 = [];
 
@@ -28,71 +114,9 @@ let x;
         }  
     }
 
-const tinyButton = document.querySelector('#tiny');
-const smallButton = document.querySelector('#small');
-const mediumButton = document.querySelector('#medium');
-const largeButton = document.querySelector('#large');
-const hugeButton = document.querySelector('#huge');
-
-tinyButton.addEventListener('click', () => {
-    tinyButton.classList.add('clickedButton');
-    smallButton.classList.remove('clickedButton');
-    mediumButton.classList.remove('clickedButton');
-    largeButton.classList.remove('clickedButton');
-    hugeButton.classList.remove('clickedButton');
-    gridWidth = 5;
-})
-
-smallButton.addEventListener('click', () => {
-    smallButton.classList.add('clickedButton');
-    tinyButton.classList.remove('clickedButton');
-    mediumButton.classList.remove('clickedButton');
-    largeButton.classList.remove('clickedButton');
-    hugeButton.classList.remove('clickedButton');
-    gridWidth = 10;
-    
-})
-
-mediumButton.addEventListener('click', () => {
-    mediumButton.classList.add('clickedButton');
-    tinyButton.classList.remove('clickedButton');
-    smallButton.classList.remove('clickedButton');
-    largeButton.classList.remove('clickedButton');
-    hugeButton.classList.remove('clickedButton');
-    gridWidth = 20;
-})
-
-largeButton.addEventListener('click', () => {
-    largeButton.classList.add('clickedButton');
-    tinyButton.classList.remove('clickedButton');
-    mediumButton.classList.remove('clickedButton');
-    smallButton.classList.remove('clickedButton');
-    hugeButton.classList.remove('clickedButton');
-    gridWidth = 50;
-})
-
-hugeButton.addEventListener('click', () => {
-    hugeButton.classList.add('clickedButton');
-    tinyButton.classList.remove('clickedButton');
-    mediumButton.classList.remove('clickedButton');
-    largeButton.classList.remove('clickedButton');
-    smallButton.classList.remove('clickedButton');
-    gridWidth = 100;
-})
-
-
-    
-    
-
-const grid = document.createElement('div');
-grid.setAttribute("id", "gridClass");
-container.appendChild(grid);
-
-
-
 
  if (500 % gridWidth == 0) {
-for (let i = 0; i < ((500 / gridWidth) -1)* ((500 / gridWidth) + 1); i++) {
+for (let i = 0; i < ((500 / gridWidth) -1) * ((500 / gridWidth) + 1); i++) {
     const grid = document.createElement('div');
     grid.setAttribute("id", "gridClass");
     container.appendChild(grid);
@@ -106,19 +130,11 @@ else {
     container.appendChild(grid);
 }
 }
+*/
 
 
 
 
-const peos = container.querySelectorAll('div');
-
-peos.forEach((div) => {
-    div.style.width = gridWidth + "px";
-})
-
-peos.forEach((div) => {
-    div.style.height = gridWidth + "px";
-})
 
 const btns = document.querySelectorAll('button');
 const colorButton = document.querySelector('#colorButton');
@@ -136,7 +152,7 @@ let y = Math.floor(x);
 return rainbowColors[y];
 }
 
-
+const blocks = document.querySelectorAll('#gridClass');
 
 
 
@@ -144,6 +160,7 @@ return rainbowColors[y];
         colorButton.classList.add('clickedButton');
         eraserButton.classList.remove('clickedButton');
         rainbowButton.classList.remove('clickedButton');
+
         peos.forEach((div) => {
             div.addEventListener('mouseover', () => {
                 div.style.backgroundColor = 'black';
