@@ -2,7 +2,7 @@
 const container = document.querySelector('#sketchPlace');
 let gridWidth 
 
-//gridWidth = prompt("Enter the block's width and height");
+gridWidth = prompt("Enter the block's width and height");
 let arr = [];
 let arr1 = [];
 
@@ -27,7 +27,7 @@ let x;
              x = arr[i];
         }  
     }
-
+/*
 const tinyButton = document.querySelector('#tiny');
 const smallButton = document.querySelector('#small');
 const mediumButton = document.querySelector('#medium');
@@ -81,7 +81,7 @@ hugeButton.addEventListener('click', () => {
 })
 
 
-    
+    */
     
 
 const grid = document.createElement('div');
