@@ -39,6 +39,7 @@ tinyButton.addEventListener('click', () => {
     console.log(gridWidth);
     makeGrid(gridWidth)
     
+    
 })
 
 smallButton.addEventListener('click', () => {
@@ -87,7 +88,8 @@ hugeButton.addEventListener('click', () => {
     console.log(gridWidth);
     makeGrid(gridWidth)
 })
-const peos = container.querySelectorAll('div');
+
+
 /*
 let arr = [];
 let arr1 = [];
@@ -152,7 +154,7 @@ let y = Math.floor(x);
 return rainbowColors[y];
 }
 
-const blocks = document.querySelectorAll('#gridClass');
+
 
 
 
@@ -160,8 +162,8 @@ const blocks = document.querySelectorAll('#gridClass');
         colorButton.classList.add('clickedButton');
         eraserButton.classList.remove('clickedButton');
         rainbowButton.classList.remove('clickedButton');
-
-        peos.forEach((div) => {
+        const blocks = document.querySelectorAll('#gridClass');
+        blocks.forEach((div) => {
             div.addEventListener('mouseover', () => {
                 div.style.backgroundColor = 'black';
             })
@@ -174,7 +176,8 @@ const blocks = document.querySelectorAll('#gridClass');
         rainbowButton.classList.add('clickedButton');
         eraserButton.classList.remove('clickedButton');
         colorButton.classList.remove('clickedButton');
-        peos.forEach((div) => {
+        const blocks = document.querySelectorAll('#gridClass');
+        blocks.forEach((div) => {
             div.addEventListener('mouseover', () => {
                 div.style.backgroundColor = rainbowFunction();
             }) 
@@ -187,7 +190,8 @@ const blocks = document.querySelectorAll('#gridClass');
         eraserButton.classList.add('clickedButton');
         colorButton.classList.remove('clickedButton');
         rainbowButton.classList.remove('clickedButton');
-        peos.forEach((div) => {
+        const blocks = document.querySelectorAll('#gridClass');
+        blocks.forEach((div) => {
             div.addEventListener('mouseover', () => {
                 div.style.backgroundColor = 'white';
             })
@@ -196,7 +200,8 @@ const blocks = document.querySelectorAll('#gridClass');
 
 
     clearButton.addEventListener('click', () => {
-        peos.forEach((div) => {
+        const blocks = document.querySelectorAll('#gridClass');
+        blocks.forEach((div) => {
                 div.style.backgroundColor = 'white';
             });
         });
